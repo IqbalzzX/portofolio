@@ -35,20 +35,34 @@ window.addEventListener('click', function (e) {
 // Darkmode toggle
 const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
+const toggleIcon = document.querySelector('.toggle-icon');
 
 darkToggle.addEventListener('click', function () {
   if (darkToggle.checked) {
     html.classList.add('dark');
     localStorage.theme = 'dark';
+    toggleIcon.classList.remove('fa-moon');
+    toggleIcon.classList.add('fa-sun');
   } else {
     html.classList.remove('dark');
     localStorage.theme = 'light';
+    toggleIcon.classList.remove('fa-sun');
+    toggleIcon.classList.add('fa-moon');
   }
 });
 
-// pindahkan posisi toggle sesuai mode
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+// Pindahkan posisi toggle sesuai mode
+if (
+  localStorage.theme === 'dark' ||
+  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+) {
   darkToggle.checked = true;
+  html.classList.add('dark');
+  toggleIcon.classList.remove('fa-moon');
+  toggleIcon.classList.add('fa-sun');
 } else {
   darkToggle.checked = false;
+  html.classList.remove('dark');
+  toggleIcon.classList.remove('fa-sun');
+  toggleIcon.classList.add('fa-moon');
 }
