@@ -15,7 +15,7 @@ Halo! Saya Iqbal Rizki Maulana, seorang Mahasiswa, yang bersemangat tentang peng
 
 ## 🛠️ Keterampilan
 
-Berikut adalah beberapa teknologi dan alat yang saya kuasai:
+Berikut adalah beberapa teknologi dan alat yang saya gunakan untuk membuat portofolio ini:
 
 ### Bahasa Pemrograman:
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)
